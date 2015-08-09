@@ -1,13 +1,12 @@
-package com.zx.player.zxplayer.base;
+package com.zx.player.utils;
 
 import android.util.Log;
 
 /**
- * 日志处理类
- * Created by niuniuzhang on 15/7/28.
+ * 公共log类
+ * Created by leon on 15/8/9.
  */
-public class LogUtils {
-
+public class ZXLog {
     private static final boolean isDebug = true;
 
     public static void v(String tag, String msg) {

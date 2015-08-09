@@ -6,11 +6,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import in.srain.cube.views.ptr.PtrClassicFrameLayout;
+
 /**
  * Fragment的基类
  * Created by niuniuzhang on 15/7/28.
  */
-public class BaseFragment extends Fragment {
+public abstract class BaseFragment extends Fragment {
+
+    protected View mView; // 根视图
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -24,7 +28,13 @@ public class BaseFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
+        int resId = getResourceLayout();
+        if (resId <= 0) {
+            return null;
+        }
+        mView = inflater.inflate(resId, container, false);
+        initViews(mView);
+        return mView;
     }
 
     @Override
@@ -46,4 +56,8 @@ public class BaseFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
     }
+
+    protected abstract int getResourceLayout();
+
+    protected abstract void initViews(View baseView);
 }

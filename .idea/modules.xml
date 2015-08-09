@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ZXPlayer.iml" filepath="$PROJECT_DIR$/ZXPlayer.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zxplayer.iml" filepath="$PROJECT_DIR$/zxplayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zxplayer.iml" filepath="$PROJECT_DIR$/zxplayer.iml" />
     </modules>
   </component>
 </project>
