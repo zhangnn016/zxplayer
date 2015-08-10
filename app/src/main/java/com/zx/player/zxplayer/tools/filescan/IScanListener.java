@@ -1,4 +1,4 @@
-package com.zx.player.zxplayer.tools;
+package com.zx.player.zxplayer.tools.filescan;
 
 /**
  * 文件扫描的listener
