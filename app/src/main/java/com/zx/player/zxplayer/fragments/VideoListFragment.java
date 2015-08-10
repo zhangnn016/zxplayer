@@ -5,7 +5,11 @@ import android.view.View;
 import android.widget.ListView;
 
 import com.zx.player.zxplayer.R;
+import com.zx.player.zxplayer.adapters.VideoListAdapter;
 import com.zx.player.zxplayer.base.BaseFragment;
+import com.zx.player.zxplayer.objects.FileInfoObject;
+
+import java.util.List;
 
 import in.srain.cube.views.ptr.PtrClassicFrameLayout;
 import in.srain.cube.views.ptr.PtrDefaultHandler;
@@ -20,6 +24,8 @@ public class VideoListFragment extends BaseFragment {
 
     private PtrClassicFrameLayout mRefreshBase;
     private ListView mListView;
+    private VideoListAdapter mListAdapter;
+    private List<FileInfoObject> mDataList;
 
     @Override
     protected int getResourceLayout() {
