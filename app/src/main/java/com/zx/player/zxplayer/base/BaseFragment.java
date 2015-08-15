@@ -19,6 +19,7 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        doInit();
     }
 
     @Override
@@ -59,5 +60,15 @@ public abstract class BaseFragment extends Fragment {
 
     protected abstract int getResourceLayout();
 
+    /**
+     * 初始化views
+     * @param baseView
+     */
     protected abstract void initViews(View baseView);
+
+    /**
+     * 做一些activity created之后的工作
+     */
+    protected abstract void doInit();
+
 }

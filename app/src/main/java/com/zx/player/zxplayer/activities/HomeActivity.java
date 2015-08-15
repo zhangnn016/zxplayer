@@ -69,7 +69,6 @@ public class HomeActivity extends BaseActivity {
         mBottomVideoList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZXToast.showToast("VideoList");
                 setFragment(R.id.layout_container, mVideoListFragment);
             }
         });
@@ -77,7 +76,6 @@ public class HomeActivity extends BaseActivity {
         mBottomSecretList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZXToast.showToast("SecretList");
                 setFragment(R.id.layout_container, mSecretListFragment);
             }
         });
@@ -85,7 +83,6 @@ public class HomeActivity extends BaseActivity {
         mBottomSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZXToast.showToast("Settings");
                 setFragment(R.id.layout_container, mSettingsFragment);
             }
         });

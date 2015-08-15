@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.view.View;
 import android.widget.ListView;
 
-import com.zx.player.zxplayer.objects.FileInfoObject;
+import com.zx.player.zxplayer.objects.ObjectFileInfo;
 
 /**
  * viewholder的基类
@@ -18,7 +18,7 @@ public abstract class AbsViewHolder {
         mActivity = activity;
     }
 
-    public final View createView(FileInfoObject obj, ListView lv) {
+    public final View createView(ObjectFileInfo obj, ListView lv) {
         mListView = lv;
         if (mActivity != null) {
             View view = mActivity.getLayoutInflater().inflate(getLayoutId(), null);
@@ -33,5 +33,5 @@ public abstract class AbsViewHolder {
 
     public abstract void initView(View base, ListView lv);
 
-    public abstract void refreshView(FileInfoObject object);
+    public abstract void refreshView(ObjectFileInfo object);
 }

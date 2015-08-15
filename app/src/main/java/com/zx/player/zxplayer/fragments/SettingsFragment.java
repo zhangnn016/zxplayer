@@ -19,4 +19,9 @@ public class SettingsFragment extends BaseFragment {
     protected void initViews(View baseView) {
 
     }
+
+    @Override
+    protected void doInit() {
+
+    }
 }

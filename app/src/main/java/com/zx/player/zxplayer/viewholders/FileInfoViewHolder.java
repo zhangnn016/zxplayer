@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.zx.player.tools.PhotoShop;
 import com.zx.player.utils.TimeUtils;
 import com.zx.player.zxplayer.R;
-import com.zx.player.zxplayer.objects.FileInfoObject;
+import com.zx.player.zxplayer.objects.ObjectFileInfo;
 
 /**
  * 文件列表的viewHolder
@@ -42,14 +42,12 @@ public class FileInfoViewHolder extends AbsViewHolder {
     }
 
     @Override
-    public void refreshView(FileInfoObject object) {
+    public void refreshView(ObjectFileInfo object) {
         if (object != null) {
             mTvTitle.setText(object.fileName);
             mTvInfo.setText(TimeUtils.formatDuration(object.duration));
 
-            if (TextUtils.isEmpty(object.thumbPath)) {
-                mIvThumb.setImageResource(0);
-            } else {
+            if (!TextUtils.isEmpty(object.thumbPath)) {
                 mPhotoshop.setImageDrawable(mIvThumb, object.thumbPath, mListView);
             }
         }
